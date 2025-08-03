@@ -106,3 +106,6 @@ def app_a_swap():
   app_a_b_y = tmp_y
 ```
 </details>
+
+And an entrypoint can then be specified by simply 
+specifying the file path and function name!
