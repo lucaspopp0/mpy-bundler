@@ -2,6 +2,11 @@ package parser
 
 import "regexp"
 
+type Declaration struct {
+	Kind DeclarationKind
+	Name string
+}
+
 type DeclarationKind int
 
 const (
@@ -22,11 +27,6 @@ func (k DeclarationKind) String() string {
 	default:
 		return "unknown"
 	}
-}
-
-type Declaration struct {
-	Kind DeclarationKind
-	Name string
 }
 
 var globalVariableExpr = regexp.MustCompile(`^([_a-zA-Z][_a-zA-Z0-9]*) *=[^=]`)
